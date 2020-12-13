@@ -1,7 +1,6 @@
-package com.example.android.architecture.blueprints.todoapp.data;
+package com.jdemaagd.espressorevelado.data;
 
 import com.google.common.collect.Lists;
-import com.jdemaagd.espressorevelado.data.Task;
 import com.jdemaagd.espressorevelado.data.source.TasksDataSource;
 
 import java.util.Iterator;

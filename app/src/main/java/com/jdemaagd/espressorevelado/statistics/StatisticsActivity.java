@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.example.android.architecture.blueprints.todoapp.Injection;
+import com.jdemaagd.espressorevelado.Injection;
 import com.google.android.material.navigation.NavigationView;
 import com.jdemaagd.espressorevelado.R;
 import com.jdemaagd.espressorevelado.settings.SettingsActivity;
@@ -12,7 +12,7 @@ import com.jdemaagd.espressorevelado.util.ActivityUtils;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
+// import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.NavUtils;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -30,8 +30,8 @@ public class StatisticsActivity extends AppCompatActivity {
 
         setContentView(R.layout.statistics_act);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        // Toolbar toolbar = findViewById(R.id.toolbar);
+        // setSupportActionBar(toolbar);
         ActionBar ab = getSupportActionBar();
         ab.setTitle(R.string.statistics_title);
         ab.setHomeAsUpIndicator(R.drawable.ic_menu);

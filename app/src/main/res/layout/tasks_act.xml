@@ -47,7 +47,7 @@
                 app:fabSize="normal"
                 app:layout_anchor="@id/contentFrame"
                 app:layout_anchorGravity="bottom|right|end"
-                android:contentDescription="Add todo"/>
+                android:contentDescription="Add todo" />
 
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

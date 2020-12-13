@@ -2,13 +2,13 @@ package com.jdemaagd.espressorevelado.taskdetail;
 
 import android.os.Bundle;
 
-import com.example.android.architecture.blueprints.todoapp.Injection;
+import com.jdemaagd.espressorevelado.Injection;
 import com.jdemaagd.espressorevelado.R;
 import com.jdemaagd.espressorevelado.util.ActivityUtils;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
+// import androidx.appcompat.widget.Toolbar;
 
 /**
  * Displays task details screen
@@ -23,8 +23,8 @@ public class TaskDetailActivity extends AppCompatActivity {
 
         setContentView(R.layout.taskdetail_act);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        // Toolbar toolbar = findViewById(R.id.toolbar);
+        // setSupportActionBar(toolbar);
         ActionBar ab = getSupportActionBar();
         ab.setDisplayHomeAsUpEnabled(true);
         ab.setDisplayShowHomeEnabled(true);
