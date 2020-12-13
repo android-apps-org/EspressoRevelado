@@ -2,7 +2,7 @@ package com.jdemaagd.espressorevelado.addedittask;
 
 import android.os.Bundle;
 
-import com.example.android.architecture.blueprints.todoapp.Injection;
+import com.jdemaagd.espressorevelado.Injection;
 import com.jdemaagd.espressorevelado.R;
 import com.jdemaagd.espressorevelado.util.ActivityUtils;
 import com.jdemaagd.espressorevelado.util.EspressoIdlingResource;
@@ -11,7 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
+// import androidx.appcompat.widget.Toolbar;
 import androidx.test.espresso.IdlingResource;
 
 /**
@@ -32,8 +32,8 @@ public class AddEditTaskActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.addtask_act);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        // Toolbar toolbar = findViewById(R.id.toolbar);
+        // setSupportActionBar(toolbar);
         mActionBar = getSupportActionBar();
         mActionBar.setDisplayHomeAsUpEnabled(true);
         mActionBar.setDisplayShowHomeEnabled(true);
