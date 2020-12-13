@@ -1,0 +1,22 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:capitalize="words"
+        android:hint="@string/name_hint"
+        android:inputType="textEmailAddress"
+        android:key="email_edit_text"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_title_email" />
+
+    <ListPreference
+        android:defaultValue="-1"
+        android:entries="@array/pref_todos_sorting_list_titles"
+        android:entryValues="@array/pref_example_list_values"
+        android:key="example_list"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_title_todos_sorting" />
+
+</PreferenceScreen>
