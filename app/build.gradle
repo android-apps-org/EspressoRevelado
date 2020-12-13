@@ -14,22 +14,60 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        // makes Android Test Orchestrator run its "pm clear" command after each test invocation
+        // command ensures that app state is completely cleared between tests
+        testInstrumentationRunnerArguments clearPackageData: 'true'
+        vectorDrawables{
+            useSupportLibrary = true
+        }
+
+        // multiDexEnabled = true
+        // multiDexKeepProguard file('multi-dex-keep.txt')
     }
 
     buildTypes {
+        debug {
+            minifyEnabled true
+            // uses new built-in shrinker http://tools.android.com/tech-docs/new-build-system/built-in-shrinker
+            // useProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            testProguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguardTest-rules.pro'
+        }
+
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            minifyEnabled true
+            // useProguard true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            testProguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguardTest-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    testOptions {
+        execution 'ANDROIDX_TEST_ORCHESTRATOR'
+    }
+
+    flavorDimensions "default"
+
+    // if you need to add more flavors, consider using flavor dimensions
+    productFlavors {
+        mock {
+            dimension "default"
+            applicationIdSuffix = ".mock"
+        }
+        prod {
+            dimension "default"
+        }
+    }
 }
 
 dependencies {
-    // App's dependencies, including test
+    // app dependencies, including test
     implementation 'androidx.preference:preference:1.1.0-rc01'
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.cardview:cardview:1.0.0'
