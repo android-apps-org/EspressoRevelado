@@ -16,7 +16,7 @@
         android:key="notifications_new_message"
         android:title="@string/pref_title_new_message_notifications"/>
 
-    <com.example.android.architecture.blueprints.todoapp.settings.SliderPreference
+    <com.jdemaagd.espressorevelado.todoapp.settings.SliderPreference
         android:id="@+id/notifications_slider"
         android:defaultValue="@string/slider_default"
         android:dialogMessage="@string/slider_optional_message"
